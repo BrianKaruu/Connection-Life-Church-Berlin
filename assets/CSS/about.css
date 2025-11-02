@@ -23,6 +23,20 @@
             --clc-gray-800: #2b2b2b;
             --clc-gray-600: #6b6b6b;
 
+               /* Font stacks */
+            --clc-font-body: 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --clc-font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            --clc-font-accent: 'Playfair Display', serif;
+
+            /* Spacing & sizes */
+            --clc-spacing-4: 1rem;
+            --clc-text-xs: 0.75rem;
+            --clc-text-sm: 0.875rem;
+            --clc-text-base: 1rem;
+            --clc-text-xl: 1.25rem;
+            --clc-radius-lg: 15px;
+            --clc-shadow-md: 0 6px 24px rgba(0,0,0,0.08);
+
             /* Backwards-compatible names used by this file (map to same values) */
             --primary-blue: var(--clc-primary);
             --primary-dark: var(--clc-primary-navy);
@@ -56,16 +70,33 @@
         /* nav-links container now provided by assets/CSS/base.css; link styles remain below */
 
         .nav-links a {
-            text-decoration: none;
+             text-decoration: none;
             color: var(--text-dark);
             font-weight: 600;
+            font-size: var(--clc-text-base);
             transition: color 0.3s;
+            position: relative;
+            font-family: var(--clc-font-body);
         }
 
         .nav-links a:hover {
-            color: var(--primary-blue);
+            color: var(--primary-navy);
         }
 
+         .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--clc-accent-gold);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
              .hamburger {
   width: 30px; /* Or whatever size you want your clickable area */
   height: 30px;

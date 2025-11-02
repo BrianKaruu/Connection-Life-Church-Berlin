@@ -42,7 +42,7 @@
         nav {
             background: var(--clc-white);
             padding: 1rem 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 15px rgba(30, 136, 229, 0.1);
             /* Make navbar flow with the page (not sticky/fixed) */
             position: relative;
             width: 100%;
@@ -50,15 +50,7 @@
         }
 
         /* nav-container now provided by assets/CSS/base.css */
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
         /* logo text styles moved to base.css for consistency */
-
         /* nav-links container now provided by assets/CSS/base.css; link styles remain below */
 
         .nav-links a {
@@ -122,7 +114,12 @@
     left: 0;
     width: 100%;
     z-index: 999; /* stays above all elements */
-  } 
+  }
+
+  body {
+    padding-top: 80px; /* adjust based on navbar height */
+  }
+ 
 }
 
 
