@@ -108,16 +108,14 @@
  
 /* Make navbar sticky ONLY on mobile */
 @media (max-width: 768px) {
-  nav {
-    position: fixed;
+nav {
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999; /* stays above all elements */
-  }
-
-  body {
-    padding-top: 80px; /* adjust based on navbar height */
+    z-index: 999;
+    background: var(--clc-white);
+    padding-top: env(safe-area-inset-top); /* prevents overlap on devices with notch / dynamic bars */
   }
  
 }
