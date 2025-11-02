@@ -17,7 +17,7 @@
     <nav>
         <div class="nav-container">
             <div class="logo-container">
-                <div class="logo-icon"><img src="assets/images/logo.svg" alt="Connection Life Church Berlin logo"></div>
+                <div class="logo-icon"><img src="assets/images/logo.svg"  alt="Connection Life Church Berlin logo"></div>
                 <div class="logo-text">
                     <div class="logo-main">
                         <span class="logo-connection">Connection</span>
@@ -234,6 +234,16 @@
 
     <!-- Back to Top Button -->
     <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">↑</button>
+<script>
+      function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+      }
 
+      document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+    });
+});
+</script>
     </body>
     </html>

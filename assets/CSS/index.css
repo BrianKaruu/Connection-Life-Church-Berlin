@@ -63,8 +63,8 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--clc-gray-800);
-            font-weight: 500;
+            color: var(--text-dark);
+            font-weight: 600;
             font-size: var(--clc-text-base);
             transition: color 0.3s;
             position: relative;
@@ -89,6 +89,32 @@
         .nav-links a:hover::after {
             width: 100%;
         }
+
+        .hamburger {
+  width: 30px; /* Or whatever size you want your clickable area */
+  height: 30px;
+  display: flex;
+  flex-direction: column; /* To stack the spans vertically */
+  justify-content: space-around; /* To distribute the spans */
+  align-items: center; /* To center the spans horizontally */
+  cursor: pointer; /* To indicate it's clickable */
+}
+
+.hamburger span {
+  display: block;
+  width: 30px; /* Width of the hamburger lines */
+  height: 5px; /* Height/thickness of the hamburger lines */
+  background-color: #333; /* Color of the hamburger lines */
+  border-radius: 2px; /* Slightly rounded corners */
+}
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Hidden on large screens */
+  }
+}
+ 
+
+
 
         /* hamburger menu visibility/behavior provided by assets/CSS/base.css; keep page-specific toggles in JS if needed */
 

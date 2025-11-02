@@ -8,7 +8,7 @@
      body {
             font-family: 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #222;
             -webkit-font-smoothing:antialiased;
             -moz-osx-font-smoothing:grayscale;
         }
@@ -32,6 +32,20 @@
             --white: var(--clc-white);
             --text-dark: var(--clc-text);
             --text-light: var(--clc-gray-600);
+
+              /* Font stacks */
+            --clc-font-body: 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --clc-font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            --clc-font-accent: 'Playfair Display', serif;
+
+            /* Spacing & sizes */
+            --clc-spacing-4: 1rem;
+            --clc-text-xs: 0.75rem;
+            --clc-text-sm: 0.875rem;
+            --clc-text-base: 1rem;
+            --clc-text-xl: 1.25rem;
+            --clc-radius-lg: 15px;
+            --clc-shadow-md: 0 6px 24px rgba(0,0,0,0.08);
         }
         
         /* Navigation */
@@ -45,6 +59,12 @@
             z-index: 50;
         }
 
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
         /* Use Playfair Display for headings for a modern, elegant look */
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -56,16 +76,58 @@
 
         /* nav-links container now provided by assets/CSS/base.css; link styles remain below */
 
-        .nav-links a {
+              .nav-links a {
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 600;
+            font-size: var(--clc-text-base);
             transition: color 0.3s;
+            position: relative;
+            font-family: var(--clc-font-body);
         }
 
         .nav-links a:hover {
-            color: var(--primary-blue);
+            color: var(--clc-primary-navy);
         }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--clc-accent-gold);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+             .hamburger {
+  width: 30px; /* Or whatever size you want your clickable area */
+  height: 30px;
+  display: flex;
+  flex-direction: column; /* To stack the spans vertically */
+  justify-content: space-around; /* To distribute the spans */
+  align-items: center; /* To center the spans horizontally */
+  cursor: pointer; /* To indicate it's clickable */
+}
+
+.hamburger span {
+  display: block;
+  width: 30px; /* Width of the hamburger lines */
+  height: 5px; /* Height/thickness of the hamburger lines */
+  background-color: #333; /* Color of the hamburger lines */
+  border-radius: 2px; /* Slightly rounded corners */
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Hidden on large screens */
+  }
+}
 
          /* Page Hero */
         .page-hero {
@@ -257,24 +319,6 @@
      }
  }
  
- @media (max-width: 768px) {
-     .nav-container {
-         flex-direction: column;
-         gap: 1rem;
-     }
- 
-     .nav-links {
-         flex-direction: column;
-         gap: 1rem;
-         text-align: center;
-         width: 100%;
-     }
- 
-      .page-hero h1 {
-                font-size: 2.5rem;
-            }
-
- }
  
  @media (max-width: 480px) {
      .page-hero h1 {
