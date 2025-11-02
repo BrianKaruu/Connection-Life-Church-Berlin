@@ -107,6 +107,7 @@
   background-color: #333; /* Color of the hamburger lines */
   border-radius: 2px; /* Slightly rounded corners */
 }
+
 @media (min-width: 769px) {
   .hamburger {
     display: none; /* Hidden on large screens */
@@ -121,12 +122,7 @@
     left: 0;
     width: 100%;
     z-index: 999; /* stays above all elements */
-  }
-
-  /* Push page content down so it doesn't hide behind navbar */
-  body {
-    padding-top: 80px; /* adjust based on navbar height */
-  }
+  } 
 }
 
 
