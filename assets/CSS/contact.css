@@ -90,6 +90,22 @@
     display: none; /* Hidden on large screens */
   }
 }
+
+/* Make navbar sticky ONLY on mobile */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* stays above all elements */
+  }
+
+  /* Push page content down so it doesn't hide behind navbar */
+  body {
+    padding-top: 80px; /* adjust based on navbar height */
+  }
+}
         /* hamburger visibility/behavior provided by assets/CSS/base.css; keep JS toggles as needed */
   
   /* Map Container */

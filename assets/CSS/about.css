@@ -90,6 +90,22 @@
   }
 }
 
+/* Make navbar sticky ONLY on mobile */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* stays above all elements */
+  }
+
+  /* Push page content down so it doesn't hide behind navbar */
+  body {
+    padding-top: 80px; /* adjust based on navbar height */
+  }
+}
+
         /* Page Hero */
         .page-hero {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
