@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Connection Life Church Berlin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/CSS/base.css">
+    <link rel="stylesheet" href="assets/CSS/gallery.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+ <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo-icon"><img src="assets/images/logo.svg" alt="Connection Life Church Berlin logo"></div>
+                <div class="logo-text">
+                    <div class="logo-main">
+                        <span class="logo-connection">Connection</span>
+                        <span class="logo-life">Life</span>
+                        <span class="logo-church">Church</span>
+                        <span class="logo-berlin">Berlin</span>
+                    </div>
+                    <div class="logo-tagline">Connecting Upward, Inward, & Outward</div>
+                </div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About-Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>      
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero"> 
+            <h1>Our Church Gallery</h1>
+            <p>Capturing moments of worship, fellowship, and community</p>    
+    </section>
+ 
+ 
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <!-- Gallery items will be populated dynamically -->
+        </div>
+    </section>
+ 
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <div class="lightbox-image-container">
+                <img id="lightbox-image" src="" alt="">
+                <button class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button class="nav-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="lightbox-info">
+                <h3></h3>
+                <p class="date"></p>
+            </div>
+        </div>
+    </div>
+ 
+    <script>
+        // Gallery data (auto-populated with all images in assets/images)
+        const galleryData = [
+            // IMG series
+           
+            { id: 2, image: './assets/images/IMG-20251023-WA0002.jpg', title: 'IMG-20251023-WA0002', date: '', category: 'all' },
+            { id: 3, image: './assets/images/IMG-20251023-WA0003.jpg', title: 'IMG-20251023-WA0003', date: '', category: 'all' },
+            { id: 4, image: './assets/images/IMG-20251023-WA0004.jpg', title: 'IMG-20251023-WA0004', date: '', category: 'all' },
+            { id: 5, image: './assets/images/IMG-20251023-WA0005.jpg', title: 'IMG-20251023-WA0005', date: '', category: 'all' },
+            { id: 6, image: './assets/images/IMG-20251023-WA0006.jpg', title: 'IMG-20251023-WA0006', date: '', category: 'all' },
+            { id: 7, image: './assets/images/IMG-20251023-WA0007.jpg', title: 'IMG-20251023-WA0007', date: '', category: 'all' },
+            { id: 9, image: './assets/images/IMG-20251023-WA0009.jpg', title: 'IMG-20251023-WA0009', date: '', category: 'all' },
+            { id: 10, image: './assets/images/IMG-20251023-WA0010.jpg', title: 'IMG-20251023-WA0010', date: '', category: 'all' },
+            { id: 11, image: './assets/images/IMG-20251023-WA0011.jpg', title: 'IMG-20251023-WA0011', date: '', category: 'all' },           
+            { id: 14, image: './assets/images/IMG-20251023-WA0014.jpg', title: 'IMG-20251023-WA0014', date: '', category: 'all' },           
+            { id: 22, image: './assets/images/IMG-20251023-WA0022.jpg', title: 'IMG-20251023-WA0022', date: '', category: 'all' },       
+            { id: 25, image: './assets/images/IMG-20251023-WA0025.jpg', title: 'IMG-20251023-WA0025', date: '', category: 'all' },
+            { id: 26, image: './assets/images/IMG-20251023-WA0026.jpg', title: 'IMG-20251023-WA0026', date: '', category: 'all' },     
+            { id: 28, image: './assets/images/IMG-20251023-WA0028.jpg', title: 'IMG-20251023-WA0028', date: '', category: 'all' },
+            { id: 29, image: './assets/images/IMG-20251023-WA0029.jpg', title: 'IMG-20251023-WA0029', date: '', category: 'all' },
+            { id: 33, image: './assets/images/IMG-20251023-WA0033.jpg', title: 'IMG-20251023-WA0033', date: '', category: 'all' },
+           
+           
+        ];
+ 
+        // Populate gallery grid
+        const galleryGrid = document.querySelector('.gallery-grid');
+         
+        function createGalleryItem(item) {
+            return `
+                <div class="gallery-item" data-category="${item.category}">
+                    <div class="gallery-item-inner">
+                        <img src="${item.image}" alt="${item.title}" loading="lazy" decoding="async">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>${item.title}</h3>
+                                <p class="gallery-date">${item.date}</p>
+                            </div>
+                            <button class="view-btn" onclick="openLightbox(${item.id})">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+ 
+        function renderGallery(items = galleryData) {
+            galleryGrid.innerHTML = items.map(item => createGalleryItem(item)).join('');
+        }
+ 
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+         
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+ 
+                // Filter gallery items
+                const category = btn.textContent.trim().toLowerCase();
+                const filteredItems = category === 'all' 
+                    ? galleryData 
+                    : galleryData.filter(item => item.category === category);
+                 
+                renderGallery(filteredItems);
+            });
+        });
+ 
+        // Lightbox functionality
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImage = document.querySelector('#lightbox-image');
+        const lightboxTitle = document.querySelector('.lightbox-info h3');
+        const lightboxDate = document.querySelector('.lightbox-info .date');
+        const closeBtn = document.querySelector('.close-btn');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+         
+        let currentImageIndex = 0;
+ 
+        function openLightbox(imageId) {
+            currentImageIndex = galleryData.findIndex(item => item.id === imageId);
+            updateLightboxContent();
+            lightbox.classList.add('active');
+        }
+ 
+        function updateLightboxContent() {
+            const item = galleryData[currentImageIndex];
+            lightboxImage.src = item.image;
+            lightboxTitle.textContent = item.title;
+            lightboxDate.textContent = item.date;
+        }
+ 
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+ 
+        prevBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + galleryData.length) % galleryData.length;
+            updateLightboxContent();
+        });
+ 
+        nextBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % galleryData.length;
+            updateLightboxContent();
+        });
+ 
+        // Close lightbox on overlay click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+ 
+        // Initialize gallery
+        renderGallery();
+    </script>
+ </body>
+ </html>
+   
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox()">×</button>
+            <div id="lightbox-content-area"></div>
+        </div>
+    </div>
+
+    <script>
+        function filterGallery(category) {
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Filter gallery items
+            document.querySelectorAll('.gallery-grid').forEach(grid => {
+                if (category === 'all') {
+                    grid.style.display = 'grid';
+                } else {
+                    if (grid.getAttribute('data-category') === category) {
+                        grid.style.display = 'grid';
+                    } else {
+                        grid.style.display = 'none';
+                    }
+                }
+            });
+
+            // Also hide/show category titles
+            document.querySelectorAll('.category-title').forEach(title => {
+                if (category === 'all') {
+                    title.style.display = 'flex';
+                } else {
+                    const nextGrid = title.nextElementSibling;
+                    if (nextGrid && nextGrid.getAttribute('data-category') === category) {
+                        title.style.display = 'flex';
+                    } else {
+                        title.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Add click event to gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const title = this.querySelector('.gallery-title').textContent;
+                const description = this.querySelector('.gallery-description').textContent;
+                const date = this.querySelector('.gallery-date').textContent;
+                
+                document.getElementById('lightbox-content-area').innerHTML = `
+                    <h2 style="color: var(--clc-primary); margin-bottom: 1rem;">${title}</h2>
+                    <p style="color: var(--clc-primary); margin-bottom: 1rem;">${date}</p>
+                    <p style="color: var(--clc-text); line-height: 1.8;">${description}</p>
+                `;
+                document.getElementById('lightbox').classList.add('active');
+            });
+        });
+    </script>
+
+   <!-- AMAZING FOOTER -->
+    <footer>
+        <div class="footer-background"></div>
+        
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="footer-container">
+                <!-- Logo & About Column -->
+                <div class="footer-logo-section footer-column">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"><img src="assets/images/logo.svg" alt="CLC logo"></div>
+                        <div class="footer-logo-text">
+                            <h3>Connection Life Church Berlin</h3>
+                            <p>Connecting Upward, Inward, & Outward</p>
+                        </div>
+                    </div>
+                  <!--  <p class="footer-description">
+                        Founded in 2016, we are a vibrant community committed to growing in faith, fellowship, and service. Led by Bishop Sammy Irungu, we believe in the powerful message of the cross and the risen Christ.
+                    </p> -->
+                    <div class="footer-mission">
+                        <strong>"Raised to Raise"</strong> – We are called to grow spiritually and, in turn, raise others to experience the same transformation.
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                      <ul class="footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                        <li><a href="/contact.html">Contact-Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Service Times Column -->
+                <div class="footer-column">
+                    <h4>Service Times</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Sunday: 13:00 - 16:00</a></li>
+                        <li><a href="#services">Wednesday: 18:00 - 19:00</a></li>
+                        <li><a href="#services">Friday: 18:00 - 19:00</a></li>
+                        <li><a href="#services">Saturday: 19:00 - 20:00</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h4>Get in Touch</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">📍</div>
+                        <div>
+                            <strong>Address:</strong><br>
+                            Hausotterplatz 3<br>
+                            13409 Berlin, Germany
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">📞</div>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+4917672325684">+49 176 7232 5684</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">✉️</div>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@clcberlin.com">info@clcberlin.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <div class="footer-copyright">
+                    &copy; 2025 <strong>Connection Life Church Berlin</strong>. All Rights Reserved. | Made with ❤️ for the Kingdom
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link" aria-label="TikTok" title="TikTok">🎵</a>
+                    <a href="#" class="footer-social-link" aria-label="Instagram" title="Instagram">📷</a>
+                    <a href="#" class="footer-social-link" aria-label="Facebook" title="Facebook">👥</a>
+                    <a href="#" class="footer-social-link" aria-label="Twitter" title="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to Top Button -->
+
+<script>
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact-Us Page</title>
+    <!-- Google Fonts: Playfair Display + Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/CSS/base.css">
+    <link rel="stylesheet" href="assets/CSS/contact.css">
+    </head>
+    <body>
+         <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo-icon"><img src="assets/images/logo.svg" alt="Connection Life Church Berlin logo"></div>
+                <div class="logo-text">
+                    <div class="logo-main">
+                        <span class="logo-connection">Connection</span>
+                        <span class="logo-life">Life</span>
+                        <span class="logo-church">Church</span>
+                        <span class="logo-berlin">Berlin</span>
+                    </div>
+                    <div class="logo-tagline">Connecting Upward, Inward, & Outward</div>
+                </div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About-Us</a></li>
+                <li><a href="/gallery.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <!-- Contact Form Card -->
+            <div class="contact-card">
+                <div class="contact-header">
+                    <h2>Get in Touch</h2>
+                    <p>We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required placeholder="How can we help?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-wrapper">
+                <p class="location-text">📍 Hausotterplatz 3, 13409 Berlin</p>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.9881288231977!2d13.373168776574222!3d52.56982593253945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8524a2351edbb%3A0x4198c6942ac89d96!2sHausotterpl.%203%2C%2013409%20Berlin!5e0!3m2!1sen!2sde!4v1760224546719!5m2!1sen!2sde" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Contact Info Cards -->
+            <div class="contact-info-grid">
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+4917672325684">+49 176 7232 5684</a></p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:info@clcberlin.com">info@clcberlin.com</a></p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🌐</div>
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="TikTok">🎵</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script>
+        // Contact Form Submission Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // Show success message (you can customize this)
+            alert(`Thank you, ${name}! Your message has been received. We'll get back to you soon at ${email}.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+
+  
+    <!-- AMAZING FOOTER -->
+    <footer>
+        <div class="footer-background"></div>
+        
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="footer-container">
+                <!-- Logo & About Column -->
+                <div class="footer-logo-section footer-column">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"><img src="assets/images/logo.svg" alt="CLC logo"></div>
+                        <div class="footer-logo-text">
+                            <h3>Connection Life Church Berlin</h3>
+                            <p>Connecting Upward, Inward, & Outward</p>
+                        </div>
+                    </div>
+                  <!--  <p class="footer-description">
+                        Founded in 2016, we are a vibrant community committed to growing in faith, fellowship, and service. Led by Bishop Sammy Irungu, we believe in the powerful message of the cross and the risen Christ.
+                    </p> -->
+                    <div class="footer-mission">
+                        <strong>"Raised to Raise"</strong> – We are called to grow spiritually and, in turn, raise others to experience the same transformation.
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                      <ul class="footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                        <li><a href="/contact.html">Contact-Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Service Times Column -->
+                <div class="footer-column">
+                    <h4>Service Times</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Sunday: 13:00 - 16:00</a></li>
+                        <li><a href="#services">Wednesday: 18:00 - 19:00</a></li>
+                        <li><a href="#services">Friday: 18:00 - 19:00</a></li>
+                        <li><a href="#services">Saturday: 19:00 - 20:00</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h4>Get in Touch</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">📍</div>
+                        <div>
+                            <strong>Address:</strong><br>
+                            Hausotterplatz 3<br>
+                            13409 Berlin, Germany
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">📞</div>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+4917672325684">+49 176 7232 5684</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">✉️</div>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@clcberlin.com">info@clcberlin.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <div class="footer-copyright">
+                    &copy; 2025 <strong>Connection Life Church Berlin</strong>. All Rights Reserved. | Made with ❤️ for the Kingdom
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link" aria-label="TikTok" title="TikTok">🎵</a>
+                    <a href="#" class="footer-social-link" aria-label="Instagram" title="Instagram">📷</a>
+                    <a href="#" class="footer-social-link" aria-label="Facebook" title="Facebook">👥</a>
+                    <a href="#" class="footer-social-link" aria-label="Twitter" title="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">↑</button>
+
+    </body>
+    </html>

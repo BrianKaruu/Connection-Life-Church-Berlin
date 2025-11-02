@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLC Berlin</title>
+    <!-- Google Fonts: Playfair Display (headings) + Source Sans Pro (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/base.css">
+    <link rel="stylesheet" href="assets/CSS/index.css">
+    <!-- Favicon / site logo -->
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo-icon"><img src="assets/images/logo.svg" alt="Connection Life Church Berlin logo"></div>
+                <div class="logo-text">
+                    <div class="logo-main">
+                        <span class="logo-connection">Connection</span>
+                        <span class="logo-life">Life</span>
+                        <span class="logo-church">Church</span>
+                        <span class="logo-berlin">Berlin</span>
+                    </div>
+                    <div class="logo-tagline">Connecting Upward, Inward, & Outward</div>
+                </div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="/about.html">About-Us</a></li>
+                <li><a href="/gallery.html">Gallery</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-welcome">Welcome to</div>
+            <h1>Connection Life Church Berlin</h1>
+            <p class="hero-tagline">Connecting Upward, Inward, & Outward</p>
+            
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Join Us This Sunday</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+
+            <div class="hero-service-times">
+                <div class="service-time-label">Sunday Service</div>
+                <div class="service-time-main">13:00 - 16:00</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome/About Section -->
+    <section class="welcome-section" id="about">
+        <div class="welcome-container">
+            <div class="welcome-content">
+                <h2>Welcome to Connection Life Church Berlin!</h2>
+                <h3>We Are So Glad You're Here!</h3>
+                
+                <p>At <span class="highlight">Connection Life Church</span>, we believe in growing together in faith, fellowship, and service. Founded in 2016 by <span class="highlight">Bishop Sammy Irungu</span>, our church is deeply committed to the message of the cross and the powerful truth of the risen Christ.</p>
+                
+                <p>We offer a variety of programs to support individuals at every age and stage of life:</p>
+                
+                <ul class="welcome-list">
+                    <li><strong>Sunday School</strong> - Engaging and interactive classes for children to learn about God's Word in a fun, safe environment.</li>
+                    <li><strong>Teens and Youth Church</strong> - A space for young people to connect, worship, and explore their faith.</li>
+                    <li><strong>Women's and Men's Fellowships</strong> - Building strong communities with regular meetings offering support, encouragement, and spiritual growth.</li>
+                </ul>
+                
+                <p>Whether you're looking for a place for your children or a group to connect with, we have a place for you!</p>
+                
+                <div class="cta-button">
+                    <a href="#contact" class="btn btn-primary">Get Connected</a>
+                </div>
+            </div>
+
+            <div class="welcome-image">
+                <div class="image-placeholder">
+                    <div>
+                        <p style="margin-bottom: 1rem;"><img src="/assets/images/WhatsApp Image 2025-10-15 at 17.03.53_827024c3.jpg" alt="img" width="500" height="500"></p>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">(Bishop Sammy or church community image)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Values Section -->
+    <section class="vision-section" id="vision">
+        <div class="vision-container">
+            <div class="vision-header">
+                <h2>Our Vision & Values</h2>
+                <p class="subtitle">Building a Community Rooted in Christ</p>
+            </div>
+
+            <!-- Main Vision -->
+            <div class="vision-main">
+                <h3>Our Vision</h3>
+                <p>To make disciples of all nations, empowering individuals to grow in their faith and share the Gospel with the world.</p>
+            </div>
+
+            <!-- Vision Cards Grid -->
+            <div class="vision-grid">
+                <!-- Motto Card -->
+                <div class="vision-card">
+                    <div class="vision-card-icon">🌱</div>
+                    <h3>Our Motto</h3>
+                    <p><strong>Raised to Raise</strong> – We are called to grow spiritually and, in turn, raise others to experience the same transformation.</p>
+                </div>
+
+                <!-- Focus Card -->
+                <div class="vision-card">
+                    <div class="vision-card-icon">✝️</div>
+                    <h3>Our Focus</h3>
+                    <p><strong>Christ</strong> – The center of everything we do, as we seek to reflect His love, teachings, and sacrifice in our lives.</p>
+                </div>
+
+                <!-- Emphasis Card -->
+                <div class="vision-card">
+                    <div class="vision-card-icon">📖</div>
+                    <h3>Our Emphasis</h3>
+                    <p><strong>The Word and Prayer</strong> – We prioritize the study of God's Word and the power of prayer to strengthen our relationship with Him.</p>
+                </div>
+
+                <!-- Culture Card -->
+                <div class="vision-card">
+                    <div class="vision-card-icon">❤️</div>
+                    <h3>Our Culture</h3>
+                    <p><strong>Walking in Love & Cultivating Loyalty</strong> – We are committed to creating a community that reflects Christ's love, fostering loyalty, trust, and unity.</p>
+                </div>
+            </div>
+
+            <!-- Scripture Verse -->
+            <div class="scripture-verse">
+                <p>"Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age."</p>
+                <cite>– Matthew 28:19-20 (NIV)</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Times Section -->
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <div class="section-header">
+                <h2>Order of Service</h2>
+                <p>Join us for worship, prayer, and fellowship</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Sunday Service - Featured -->
+                <div class="service-card featured">
+                    <span class="service-day">Sunday</span>
+                    <h3 class="service-title">Church Service</h3>
+                    <div class="service-time">13:00 - 16:00</div>
+                    <p class="service-description">Join us for our main worship service with powerful preaching, uplifting worship, and fellowship. All are welcome!</p>
+                </div>
+
+                <!-- Wednesday Service -->
+                <div class="service-card">
+                    <span class="service-day">Wednesday</span>
+                    <h3 class="service-title">Intercessory Prayers</h3>
+                    <div class="service-time">18:00 - 19:00</div>
+                    <p class="service-description">A dedicated time for corporate prayer, intercession, and seeking God's presence together.</p>
+                </div>
+
+                <!-- Friday Service -->
+                <div class="service-card">
+                    <span class="service-day">Friday</span>
+                    <h3 class="service-title">Women's Prayers</h3>
+                    <div class="service-time">18:00 - 19:00</div>
+                    <p class="service-description">A special gathering for women to pray, encourage one another, and grow in faith together.</p>
+                </div>
+
+                <!-- Saturday Service -->
+                <div class="service-card">
+                    <span class="service-day">Saturday</span>
+                    <h3 class="service-title">Men's Prayers</h3>
+                    <div class="service-time">19:00 - 20:00</div>
+                    <p class="service-description">Men gathering to pray, build brotherhood, and strengthen their walk with God.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section" id="ministries">
+        <div class="programs-container">
+            <div class="section-header">
+                <h2>Our Ministries</h2>
+                <p>Empowering every generation to grow in faith</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Sunday School -->
+                <div class="program-card">
+                    <div class="program-image">👶</div>
+                    <div class="program-content">
+                        <h3 class="program-title">Sunday School</h3>
+                        <p class="program-description">Every Sunday, we offer engaging and interactive Sunday School classes for children. It's a fun and safe environment where kids can learn about God's Word and grow in their faith.</p>
+                    </div>
+                </div>
+
+                <!-- Youth Church -->
+                <div class="program-card">
+                    <div class="program-image">🎸</div>
+                    <div class="program-content">
+                        <h3 class="program-title">Teens and Youth Church</h3>
+                        <p class="program-description">Our Teens and Youth Church provides a space for young people to connect, worship, and explore their faith in a way that's relevant to their lives. Join us for an exciting time of fellowship and spiritual growth.</p>
+                    </div>
+                </div>
+
+                <!-- Fellowships -->
+                <div class="program-card">
+                    <div class="program-image">🤝</div>
+                    <div class="program-content">
+                        <h3 class="program-title">Women's and Men's Fellowships</h3>
+                        <p class="program-description">We are committed to building strong communities for both men and women in our church. Our Women's and Men's Fellowships meet regularly, offering support, encouragement, and opportunities for spiritual growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMAZING FOOTER -->
+    <footer>
+        <div class="footer-background"></div>
+        
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="footer-container">
+                <!-- Logo & About Column -->
+                <div class="footer-logo-section footer-column">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"><img src="assets/images/logo.svg" alt="CLC logo"></div>
+                        <div class="footer-logo-text">
+                            <h3>Connection Life Church Berlin</h3>
+                            <p>Connecting Upward, Inward, & Outward</p>
+                        </div>
+                    </div>
+                    <div class="footer-mission">
+                        <strong>"Raised to Raise"</strong> – We are called to grow spiritually and, in turn, raise others to experience the same transformation.
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                   <ul class="footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                        <li><a href="/contact.html">Contact-Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Service Times Column -->
+                <div class="footer-column">
+                    <h4>Service Times</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Sunday: 13:00 - 16:00</a></li>
+                        <li><a href="#services">Wednesday: 18:00 - 19:00</a></li>
+                        <li><a href="#services">Friday: 18:00 - 19:00</a></li>
+                        <li><a href="#services">Saturday: 19:00 - 20:00</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h4>Get in Touch</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">📍</div>
+                        <div>
+                            <strong>Address:</strong><br>
+                            Hausotterplatz 3<br>
+                            13409 Berlin, Germany
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">📞</div>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+4917672325684">+49 176 7232 5684</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">✉️</div>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@clcberlin.com">info@clcberlin.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <div class="footer-copyright">
+                    &copy; 2025 <strong>Connection Life Church Berlin</strong>. All Rights Reserved. | Made with ❤️ for the Kingdom
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link" aria-label="TikTok" title="TikTok">🎵</a>
+                    <a href="#" class="footer-social-link" aria-label="Instagram" title="Instagram">📷</a>
+                    <a href="#" class="footer-social-link" aria-label="Twitter" title="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">↑</button>
+
+    
+
+    <script>
+
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    
+    </script>
+</body>
+</html>
