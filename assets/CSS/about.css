@@ -989,3 +989,328 @@
                 font-size: 1.1rem;
             }
         }
+
+        /* ========== ENHANCED MOBILE RESPONSIVE FOR ABOUT PAGE ========== */
+
+        /* Small Mobile (480px - 768px) */
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+
+            body {
+                padding: 0;
+            }
+
+            nav {
+                padding: 0.8rem 4%;
+            }
+
+            .about-hero {
+                height: 60vh;
+                min-height: 450px;
+                background-attachment: scroll;
+            }
+
+            .about-hero-content {
+                width: 95%;
+                padding: 1rem 1.5rem;
+            }
+
+            .about-hero h1 {
+                font-size: clamp(1.8rem, 5vw, 2.8rem);
+            }
+
+            .about-hero p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            /* Team Section */
+            .team-section {
+                padding: 2.5rem 4%;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .team-member {
+                padding: 1.5rem;
+            }
+
+            .team-member h3 {
+                font-size: 1.2rem;
+            }
+
+            .team-member p {
+                font-size: 0.95rem;
+            }
+
+            /* Mission Section */
+            .mission-section {
+                padding: 2.5rem 4%;
+            }
+
+            .mission-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .mission-content p {
+                font-size: 0.95rem;
+            }
+
+            .mission-box {
+                padding: 1.5rem;
+            }
+
+            /* Gallery Grid */
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .gallery-item {
+                border-radius: 8px;
+            }
+
+            /* Contact Section */
+            .contact-section {
+                padding: 2.5rem 4%;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-form,
+            .contact-info {
+                padding: 1.5rem;
+            }
+
+            .contact-form h3,
+            .contact-info h3 {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+
+            /* Footer */
+            footer {
+                padding: 2rem 4%;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .footer-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .footer-section p,
+            .footer-section a {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Extra Small Mobile (Below 480px) */
+        @media (max-width: 480px) {
+            html {
+                font-size: 13px;
+            }
+
+            nav {
+                padding: 0.6rem 3%;
+            }
+
+            .about-hero {
+                height: 55vh;
+                min-height: 350px;
+            }
+
+            .about-hero-content {
+                width: 98%;
+                padding: 0.8rem 1rem;
+            }
+
+            .about-hero h1 {
+                font-size: clamp(1.5rem, 4vw, 2.2rem);
+                line-height: 1.2;
+            }
+
+            .about-hero p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+
+            /* Team Section */
+            .team-section {
+                padding: 2rem 3%;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .team-member {
+                padding: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .team-member-image {
+                width: 100%;
+                height: 200px;
+            }
+
+            .team-member h3 {
+                font-size: 1.1rem;
+                margin: 0.8rem 0 0.4rem 0;
+            }
+
+            .team-member p {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .team-member-role {
+                font-size: 0.85rem;
+            }
+
+            /* Mission Section */
+            .mission-section {
+                padding: 2rem 3%;
+                margin: 1.5rem 0;
+            }
+
+            .mission-content h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .mission-content p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+
+            .mission-box {
+                padding: 1.2rem;
+                margin: 1rem 0;
+                font-size: 0.9rem;
+            }
+
+            /* Gallery Grid */
+            .gallery-section {
+                padding: 2rem 3%;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .gallery-item {
+                border-radius: 6px;
+                height: 200px;
+            }
+
+            /* Contact Section */
+            .contact-section {
+                padding: 2rem 3%;
+                margin-top: 2rem;
+            }
+
+            .contact-content {
+                gap: 1.5rem;
+            }
+
+            .contact-form,
+            .contact-info {
+                padding: 1.2rem;
+            }
+
+            .contact-form h3,
+            .contact-info h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .contact-form label,
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 0.9rem;
+            }
+
+            .contact-form button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .contact-info p {
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+            }
+
+            /* Footer */
+            footer {
+                padding: 1.5rem 3%;
+            }
+
+            .footer-content {
+                gap: 1.2rem;
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 0.6rem;
+            }
+
+            .footer-section p,
+            .footer-section a {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .footer-bottom {
+                font-size: 0.8rem;
+                padding: 1rem 0;
+                text-align: center;
+            }
+        }
+
+        /* Ultra Small (Under 380px) */
+        @media (max-width: 380px) {
+            .about-hero h1 {
+                font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .team-member-image {
+                height: 150px;
+            }
+
+            .gallery-grid {
+                gap: 0.6rem;
+            }
+
+            .gallery-item {
+                height: 150px;
+            }
+        }
