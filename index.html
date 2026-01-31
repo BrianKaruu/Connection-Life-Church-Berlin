@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="assets/CSS/index.css" />
     <!-- Favicon / site logo -->
     <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+    <!-- Preload hero background image for faster loading -->
+    <link rel="preload" as="image" href="/assets/images/empty-christian-church-building.jpg" />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -62,8 +64,8 @@
         <p class="hero-tagline">Connecting Upward, Inward, & Outward</p>
 
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Join Us This Sunday</a>
-          <a href="#about" class="btn btn-secondary">Learn More</a>
+          <a href="about.html" class="btn btn-primary">Join Us This Sunday</a>
+          <a href="about.html" class="btn btn-secondary">Learn More</a>
         </div>
 
         <div class="hero-service-times">
@@ -115,7 +117,7 @@
           </p>
 
           <div class="cta-button">
-            <a href="#contact" class="btn btn-primary">Get Connected</a>
+            <a href="contact.html" class="btn btn-primary">Get Connected</a>
           </div>
         </div>
 
@@ -406,24 +408,27 @@
           </div>
           <div class="footer-social">
             <a
-              href="#"
+              href="javascript:void(0)"
               class="footer-social-link"
               aria-label="TikTok"
               title="TikTok"
+              onclick="return false"
               >🎵</a
             >
             <a
-              href="#"
+              href="javascript:void(0)"
               class="footer-social-link"
               aria-label="Instagram"
               title="Instagram"
+              onclick="return false"
               >📷</a
             >
             <a
-              href="#"
+              href="javascript:void(0)"
               class="footer-social-link"
               aria-label="Twitter"
               title="Twitter"
+              onclick="return false"
               >🐦</a
             >
           </div>
